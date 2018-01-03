@@ -43,3 +43,6 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+
+yii_test
+yii_test.bat
