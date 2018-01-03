@@ -6,9 +6,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
 
 AppAsset::register($this);
 ?>
@@ -25,55 +23,55 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => "GRABC",
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-default navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => '开发文档', 'url' => ['/doc/index']],
     ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
+
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-left'],
         'items' => $menuItems,
     ]);
+    ?>
+    <ul id="w1" class="navbar-nav navbar-right nav">
+        <li>
+            <a href="https://github.com/codyi/grabc/network">
+                <img src="https://img.shields.io/github/forks/codyi/grabc.svg?style=social&label=Forks"/>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/codyi/grabc/stargazers">
+                <img src="https://img.shields.io/github/stars/codyi/grabc.svg?style=social&label=Starss"/>
+            </a>
+        </li>
+        <li>
+            <a href="https://goreportcard.com/report/github.com/codyi/grabc">
+                <img src="https://goreportcard.com/badge/github.com/codyi/grabc"/>
+            </a>
+        </li>
+    </ul>
+    <?php
     NavBar::end();
     ?>
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
+    <div class="container" style="height: 1000px;">
         <?= $content ?>
     </div>
 </div>
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
+        <p class="pull-left">版权所有&copy; GCRAB <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">开发者：codyi</p>
     </div>
 </footer>
 
