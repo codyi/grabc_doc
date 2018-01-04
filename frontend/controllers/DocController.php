@@ -1,13 +1,17 @@
 <?php
 namespace frontend\controllers;
 
-use yii\web\Controller;
-
 /**
  * Doc controller
  */
-class DocController extends Controller
+class DocController extends BaseController
 {
+    public function __construct($id, $module, $config = array())
+    {
+        parent::__construct($id, $module, $config);
+        $this->layout = "doc";
+    }
+
     /**
      * Displays homepage.
      *
