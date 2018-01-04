@@ -1,8 +1,8 @@
-<div class="row">
-    <div class="col-md-2 col-sm-3">
-    qqqq
+<div class="box">
+    <div class="box-header">
+
     </div>
-    <div class="col-md-10 col-sm-9">
-        <div class="box">ddd</div>
+    <div class="box-body">
+
     </div>
 </div>
