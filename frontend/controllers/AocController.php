@@ -4,7 +4,7 @@ namespace frontend\controllers;
 /**
  * Doc controller
  */
-class DocController extends BaseController
+class AocController extends BaseController
 {
     public function __construct($id, $module, $config = array())
     {
