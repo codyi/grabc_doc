@@ -12,7 +12,7 @@ NavBar::begin([
     ],
 ]);
 $menuItems = [
-    ['label' => '开发文档', 'url' => ['/doc/index']],
+    ['label' => '开发文档', 'url' => ['/docs/index']],
 ];
 
 echo Nav::widget([
