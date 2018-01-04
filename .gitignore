@@ -46,3 +46,5 @@ phpunit.phar
 
 yii_test
 yii_test.bat
+
+push.sh
