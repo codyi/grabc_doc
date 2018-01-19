@@ -29,7 +29,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => '开发文档', 'url' => ['/']],
+        ['label' => '开发文档', 'url' => ['/docs']],
     ];
 
     echo Nav::widget([
