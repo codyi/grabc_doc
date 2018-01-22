@@ -2,5 +2,7 @@
     <?=$this->render("_introduction");?>
     <?=$this->render("_install");?>
     <?=$this->render("_config");?>
+    <?=$this->render("_interface");?>
     <?=$this->render("_layout");?>
+    <?=$this->render("_menu");?>
 </div>

@@ -72,7 +72,13 @@ AppAsset::register($this);
                             <a href="#config">配置</a>
                         </li>
                         <li>
+                            <a href="#interface">用户接口</a>
+                        </li>
+                        <li>
                             <a href="#layout">设置GRABC的layout</a>
+                        </li>
+                        <li>
+                            <a href="#menu">使用GRABC的菜单</a>
                         </li>
                     </ul>
                 </nav>
